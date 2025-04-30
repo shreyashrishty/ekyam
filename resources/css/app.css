@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom animations */
+@keyframes fade-in-up {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
+
+.animate-fade-in-up { animation: fade-in-up 1s ease-out; }
+.animate-fade-in    { animation: fade-in    1.5s ease-out; }
+@keyframes gradientBG {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* apply to any full-section wrapper */
+.animate-gradient {
+  background: linear-gradient(270deg,
+    rgba(254, 202, 202, 0.7),
+    rgba(167, 139, 250, 0.7),
+    rgba(188, 250, 164, 0.7)
+  );
+  background-size: 600% 600%;
+  animation: gradientBG 12s ease infinite;
+}
